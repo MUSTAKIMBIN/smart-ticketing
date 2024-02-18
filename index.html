@@ -10,7 +10,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body >
-    <header class=" w-10/12 mx-auto">
+    <header id="header" class=" w-10/12 mx-auto">
         <!-- navbar start here -->
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -52,7 +52,7 @@
     </header>
     <main>
       <!-- Best offers section -->
-      <section class="py-14 w-10/12 mx-auto">
+      <section id="offer" class="py-14 w-10/12 mx-auto">
         <h3 class="text-center text-3xl font-extrabold mt-5">Best offers for you</h3>
         <div class="flex flex-col lg:flex-row gap-3 my-16">
           <div id="single-coupon" class="flex justify-between bg-[#FFBF0F] rounded-lg lg:w-[50vw] px-5 py-8">
@@ -261,7 +261,7 @@
                 <p class="text-sm font-bold">Grand Total</p>
                 <p class="text-sm font-bold">BDT <span id="grand-total-price">0</span></p>
               </div>
-              <button class="bg-[#1DD100] py-3 font-bold text-base rounded-lg w-full">Next</button>
+              <button onclick="popUp()" class="bg-[#1DD100] py-3 font-bold text-base rounded-lg w-full">Next</button>
             </div>
           </div>
           <!-- grand total section end -->
@@ -269,19 +269,20 @@
         </div>
       </section>
       <!-- success section -->
-      <section class="bg-gray-300 rounded-3xl flex justify-center py-20">
+      <section id="success" class="hidden bg-gray-300 rounded-3xl flex justify-center py-20">
         <div class="bg-white flex flex-col justify-center items-center border-2 border-[#1DD10055] rounded-3xl w-2/3 p-10 space-y-2">
           <img src="images/success.png" alt="success">
           <h2 class="mt-3 text-[#1DD100] text-xl font-bold">SUCCESS</h2>
           <h3 class="space-y-2 text-gray-600 font-bold text-center">Thank you for Booking Our Bus Seats. <br> 
             We are working hard to find the best service and deals for you.</h3>
           <p class="space-y-2 text-sm text-gray-500 font-semibold">Shortly you will find a confirmation in your email.</p>
-          <button class="btn bg-[#1DD100] text-white px-10 rounded-3xl font-bold text-base">Continue</button>
+          <button id="success-continue" class="btn bg-[#1DD100] text-white px-10 rounded-3xl font-bold text-base">Continue</button>
         </div>
       </section>
     </main>
     <footer>
       
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
