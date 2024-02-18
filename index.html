@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P-Ticket</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/stoppage.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class=" w-10/12 mx-auto">
     <header>
         <!-- navbar start here -->
         <div class="navbar bg-base-100">
@@ -19,22 +19,34 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Item 1</a></li>
-                  <li><a>Item 2</a></li>
-                  <li><a>Item 3</a></li>
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
                 </ul>
               </div>
               <a class="btn btn-ghost text-xl font-bold">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li><a>Item 2</a></li>
-                <li><a>Item 3</a></li>
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
               </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn text-base text-[#1DD100] bg-[#1DD10026] border-[1px] border-[#1DD100]">Bus</a>
+              <a class="btn text-base text-[#1DD100] bg-[#1DD10026] border-[1px] border-[#1DD100]">Bus<img src="images/bus-icon.png" alt="bus-icon">
+
+              </a>
+            </div>
+          </div>
+          <!-- hero section -->
+          <div class="hero min-h-[70vh] rounded-xl bg-[url(images/banner.png)]  bg-no-repeat bg-center" >
+            <div class="hero-content text-center text-neutral-content">
+              <div class="lg:max-w-xl">
+                <h1 class="mb-10 text-2xl lg:text-5xl font-bold">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
+                <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button class="btn bg-[#1DD100] font-bold border-none">Buy Tickets</button>
+              </div>
             </div>
           </div>
     </header>
