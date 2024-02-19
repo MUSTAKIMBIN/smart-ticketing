@@ -155,13 +155,13 @@
               <div class="left-seat-section">
                 <div class="left-a flex gap-3 items-center mt-6">
                   <div class="text-gray-700 font-bold"><p>A</p></div>
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>A1</p></div>
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>A2</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="A1" onclick="mySeats(this.id)"><p>A1</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="A2" onclick="mySeats(this.id)"><p>A2</p></div>
                 </div>
                 <div class="left-b flex gap-3 items-center mt-6">
                   <div class="text-gray-700 font-bold"><p>B</p></div>
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>B1</p></div>
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>B2</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="B1" onclick="mySeats(this.id)"><p>B1</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="B2" onclick="mySeats(this.id)"><p>B2</p></div>
                 </div>
                 <div class="left-a flex gap-3 items-center mt-6">
                   <div class="text-gray-700 font-bold"><p>C</p></div>
@@ -197,12 +197,12 @@
               <!-- right section -->
               <div class="left-seat-section">
                 <div class="left-a flex gap-3 items-center mt-6">
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>A3</p></div>
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>A4</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="A3" onclick="mySeats(this.id)"><p>A3</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="A4" onclick="mySeats(this.id)"><p>A4</p></div>
                 </div>
-                <div class="left-b flex gap-3 items-center mt-6">
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>B3</p></div>
-                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>B4</p></div>
+                <div class="left-b flex gap-3 items-center mt-6 ">
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="B3" onclick="mySeats(this.id)"><p>B3</p></div>
+                  <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400" id="B4" onclick="mySeats(this.id)"><p>B4</p></div>
                 </div>
                 <div class="left-a flex gap-3 items-center mt-6">
                   <div class="w-[45px] lg:w-[90px] h-[40px] bg-[#F7F8F8] rounded-lg flex justify-center items-center font-bold text-gray-400"><p>C3</p></div>
@@ -246,15 +246,20 @@
               </div>
               <div id="ticket-ditels" class="border-b-2 border-gray-400 space-y-4 py-3">
                 <!-- for append child -->
+                <div id="main-ticket-ditels" class=" font-bold text-sm">
+
+                </div>
+
+                </div>
               </div>
               <div class="flex justify-between py-5">
                 <p class="text-sm font-bold">Total Price</p>
                 <p class="text-sm font-bold">BDT <span id="total-price">0</span></p>
               </div>
               <div class="border-b-[1px] border-gray-400 border-dashed">
-                <label class="input input-bordered flex items-center gap-2">
+                <label id="input-label" class="input input-bordered flex items-center gap-2">
                   <input id="chack-cupon-input" type="text" class="grow text-gray-300 text-xs font-semibold" placeholder="Have any copupon?" />
-                  <button id="apply-cupon" class=" bg-[#1DD100] text-white text-base font-bold px-4 py-2 rounded-md">Apply</button>
+                  <button onclick="applyBtn()" id="apply-cupon" class=" bg-[#1DD100] text-white text-base font-bold px-4 py-2 rounded-md">Apply</button>
                 </label>
               </div>
               <div class="flex justify-between py-5">
@@ -280,9 +285,37 @@
         </div>
       </section>
     </main>
-    <footer>
-      
+    <footer id="footer" class="bg-black">
+      <div class="w-10/12 mx-auto text-gray-50">
+        <div class="flex justify-between items-center pt-14 pb-6 border-b-2 border-gray-400 border-dashed">
+          <div class="space-y-2">
+            <h2 class="text-2xl font-bold">P-Ticket</h2>
+            <p class="text-sm font-semibold">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-sm font-semibold text-end">Download our app</p>
+            <div class="flex border-2 rounded-xl p-4">
+              <img src="images/playstore.png" alt="playstore">
+              <div>
+                <p class="font-semibold">Get it now</p>
+                <p class="text-xl font-semibold">Google Play</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between pt-8 pb-12">
+          <div>
+            <p class="text-sm text-gray-200 font-semibold">@all rights reserved, P-Ticket services limited.2024</p>
+          </div>
+          <div class="flex justify-between text-sm font-semibold space-x-4">
+            <p>Terms & condition</p>
+            <p>Return & refund policy</p>
+            <p>Privacy policy</p>
+          </div>
+        </div>
+      </div>
     </footer>
+    <script src="utility.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
